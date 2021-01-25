@@ -16,8 +16,11 @@ Also supports injecting sql command generators to add support for other provider
     <RepositoryUrl>https://github.com/artiomchi/FlexLabs.Upsert</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>Entity Framework Core entity-framework-core EF EntityFramework EntityFrameworkCore EFCore Upsert</PackageTags>
-    <VersionPrefix>2.2.1</VersionPrefix>
+    <VersionPrefix>2.2.2</VersionPrefix>
     <PackageReleaseNotes>
+v2.2.2:
+- removed holdlock
+
 v2.2.1:      
 + Support for more expressions (Bitwise AND and bitwise OR)
 

@@ -21,15 +21,8 @@ namespace FlexLabs.EntityFrameworkCore.Upsert.Tests.EF
             DatabaseEngines = new List<TestDbContext.DbDriver>
             {
                 TestDbContext.DbDriver.InMemory,
-                TestDbContext.DbDriver.Sqlite,
                 TestDbContext.DbDriver.MSSQL,
             };
-            if (IsAppVeyor || RunLocalDockerTests)
-                DatabaseEngines.AddRange(new[]
-                {
-                    TestDbContext.DbDriver.Postgres,
-                    TestDbContext.DbDriver.MySQL,
-                });
         }
 
         public static readonly List<TestDbContext.DbDriver> DatabaseEngines;

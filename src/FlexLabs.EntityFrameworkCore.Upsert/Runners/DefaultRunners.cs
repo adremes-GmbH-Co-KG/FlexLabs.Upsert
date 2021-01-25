@@ -14,10 +14,7 @@
             => _runners ?? (_runners = new IUpsertCommandRunner[]
             {
                 new InMemoryUpsertCommandRunner(),
-                new MySqlUpsertCommandRunner(),
-                new PostgreSqlUpsertCommandRunner(),
                 new SqlServerUpsertCommandRunner(),
-                new SqliteUpsertCommandRunner(),
             });
     }
 }
