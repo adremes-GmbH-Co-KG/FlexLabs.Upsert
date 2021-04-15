@@ -65,14 +65,8 @@ namespace FlexLabs.EntityFrameworkCore.Upsert.Tests.EF.Base
             var options = new DbContextOptionsBuilder<TestDbContext>();
             switch (driver)
             {
-                case DbDriver.Postgres:
-                    options.UseNpgsql(connectionString);
-                    break;
                 case DbDriver.MSSQL:
                     options.UseSqlServer(connectionString);
-                    break;
-                case DbDriver.MySQL:
-                    options.UseMySql(connectionString);
                     break;
                 case DbDriver.InMemory:
                     options.UseInMemoryDatabase(connectionString);

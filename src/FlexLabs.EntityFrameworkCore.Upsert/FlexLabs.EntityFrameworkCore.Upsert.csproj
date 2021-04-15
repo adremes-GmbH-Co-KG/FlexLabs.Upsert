@@ -20,6 +20,12 @@ Also supports injecting sql command generators to add support for other provider
     <PackageTags>Entity Framework Core entity-framework-core EF EntityFramework EntityFrameworkCore EFCore Upsert</PackageTags>
     <VersionPrefix>3.1.1</VersionPrefix>
     <PackageReleaseNotes>
+v3.1.1
+- Remove PostgreSQL and MySQL
+* Move to EF Core 3.1.14
+* Fix Unit Tests GetColumnName() to access the property name
+* Update XUnit Library
+      
 v3.1.0
 - Referencing EF Core 3.1 only, due to internal namespace changes and compatibility issues with .NET Full Framework
 + Nulable type metadata
@@ -41,15 +47,16 @@ v2.2.0:
 + Null value handling in generated SQL
 ! Patched MySQL syntax for columns that haven't been updated but may be present in expressions
     </PackageReleaseNotes>
+    <AssemblyOriginatorKeyFile>..\..\certs\FlexLabsStrongKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <SignAssembly>True</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\certs\FlexLabsStrongKey.snk</AssemblyOriginatorKeyFile>
     <SignCertificateName>Artiom Chilaru</SignCertificateName>
-    <PostBuildEvent>signtool.exe sign /n "$(SignCertificateName)" /fd sha256 /tr "http://timestamp.digicert.com" /td sha256 FlexLabs.EntityFrameworkCore.Upsert.dll</PostBuildEvent>
+    <PostBuildEvent></PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
