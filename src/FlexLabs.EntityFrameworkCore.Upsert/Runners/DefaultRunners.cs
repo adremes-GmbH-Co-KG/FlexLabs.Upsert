@@ -16,6 +16,9 @@
             {
                 new InMemoryUpsertCommandRunner(),
                 new SqlServerUpsertCommandRunner(),
-            });
+            };
+
+            return Runners;
+        }
     }
 }
