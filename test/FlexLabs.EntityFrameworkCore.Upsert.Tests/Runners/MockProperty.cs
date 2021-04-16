@@ -39,7 +39,7 @@ namespace FlexLabs.EntityFrameworkCore.Upsert.Tests.Runners
 
         public bool IsShadowProperty => throw new NotImplementedException();
 
-        public string Name => _name;
+        public string Name => throw new NotImplementedException();
 
         public ITypeBase DeclaringType => throw new NotImplementedException();
 
